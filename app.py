@@ -491,6 +491,13 @@ def build_summary(results):
 # ROUTES
 # ─────────────────────────────────────────────────────────────────────────────
 
+@app.route('/health')
+def health():
+    """Lightweight liveness check for the TDO Toolbox hub's status dot —
+    just confirms the service is up, does no scraping."""
+    return jsonify({"status": "ok", "service": "product-health-monitor"})
+
+
 @app.route('/')
 def index():
     return render_template('index.html')
