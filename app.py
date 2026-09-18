@@ -585,4 +585,4 @@ if __name__ == '__main__':
     # threaded=True: lets Flask's dev server handle multiple requests at once
     # (e.g. several /discover calls for different categories fired together).
     # Without it, the dev server is single-threaded and would just queue them.
-    app.run(debug=True, port=5050, use_reloader=False, threaded=True)
+    app.run(debug=True, port=5012, use_reloader=False, threaded=True)
